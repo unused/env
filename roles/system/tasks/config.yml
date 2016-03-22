@@ -1,0 +1,14 @@
+---
+
+- name: Set bashrc
+  template: src=bashrc.j2 dest={{ ansible_env.HOME}}/.bashrc
+
+- name: Set git config
+  template: src=gitconfig.j2 dest={{ ansible_env.HOME}}/.gitconfig
+
+- name: Fetch vim config
+  git: repo=git@github.com:unused/.vim.git dest={{ ansible_env.HOME}}/.vim
+
+- name: Enable vim config
+  file: src={{ ansible_env.HOME }}/.vim/vimrc dest={{ ansible_env.HOME}}/.vimrc
+

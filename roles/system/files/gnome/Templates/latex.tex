@@ -1,0 +1,91 @@
+\documentclass[12pt]{scrartcl}
+\linespread {1.25}
+
+\usepackage{geometry}
+\geometry{margin=1in,bindingoffset=5mm,includeheadfoot,marginpar=48pt}
+
+\usepackage[utf8x]{inputenc}
+\usepackage{ngerman}
+\usepackage{url}
+\usepackage{graphicx}
+
+\usepackage{booktabs}
+
+\usepackage{listings}
+\lstset{
+  language=ruby,
+  backgroundcolor=\color[gray]{0.98},
+  showspaces=false,
+  tabsize=2,
+  basicstyle=\small\sffamily,
+  keywordstyle=\bfseries,
+  identifierstyle=\color{black},
+  showstringspaces=false,
+  numbers=left,
+  numberstyle=\tiny,
+  captionpos=b
+}
+
+% ========== SPECIAL ==========
+% see http://midtiby.blogspot.com/2008/07/todonotes-version-2008-07-28.html
+% \usepackage[colorlinks]{hyperref}
+% \usepackage[colorinlistoftodos]{todonotes}
+
+
+% ========== INFO ==========
+\title{Latex Document}
+\author{Christoph Lipautz}
+\date{\today{} in Graz}
+
+\begin{document}
+\pagenumbering{roman}
+
+% Titlepage
+\begin{titlepage}
+  \begin{center}
+    \vspace*{0.5cm}
+    {\LARGE Title 2} \\
+    \vspace{15mm} {\huge \textbf{Subtitle}\\}
+    \vspace{15mm}
+    {\LARGE Christoph Lipautz} \\
+    \vspace{10mm}%15
+    -------------------------------------- \\
+    \vspace{10mm}%15
+    \large
+    \vspace{15mm}%1
+    \begin{figure}[!ht]
+    \begin{center}
+    \centerline{\includegraphics[width=4cm,keepaspectratio=true]{LOGO}}
+    \end{center}
+    \end{figure}
+  \end{center}
+\end{titlepage}
+
+\pagebreak
+
+
+\clearpage
+\tableofcontents
+\pagebreak
+
+\pagenumbering{arabic}
+\section{Einführung}
+\label{sec:introduction}
+
+  \subsection{Ausgangssituation}
+  \label{sec:preface}
+
+\pagebreak
+
+% \lstlistoflistings
+
+\listoffigures
+
+\bibliographystyle{alpha}
+\bibliography{literatur}
+
+
+% \listoftodos
+
+
+\end{document}

@@ -1,0 +1,14 @@
+---
+
+- name: Install all kind of stuff on the system
+  include: packages.yml
+  tags: ['packages']
+
+- name: Configure window manager
+  include: windowmanager.yml
+  tags: ['wm']
+
+- name: Set general configurations
+  include: config.yml
+  tags: ['config']
+

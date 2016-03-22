@@ -1,0 +1,55 @@
+# {{ ansible_managed }}
+
+#-------------------------------------------------------------------
+# BASHRC - christoph@lipautz.org
+#-------------------------------------------------------------------
+
+
+# define some colors
+RED_UL='\e[4;31m'
+GREEN='\e[0;32m'
+NC='\e[0m'
+GIT_BRANCH='$(__git_ps1 "(%s)")'
+
+export PS1="[${RED_UL}\u@\h:\W \t.\d${GREEN}${GIT_BRANCH}${NC}] \n > "
+
+# enable bash completion
+if [ -f /etc/bash_completion ]; then
+    . /etc/bashcompletion
+fi
+source /usr/share/git-core/contrib/completion/git-prompt.sh
+
+# svn
+export SVN_EDITOR=vim
+alias rm-svn="find . -name .svn -print0 | xargs -0 rm -rf"
+
+# extend command cd
+export CDPATH=.:~
+alias cd.="cd .."
+alias cd..="cd ../.."
+alias cd...="cd ../../.."
+alias cd....="cd ../../../.."
+alias cd.....="cd ../../../../.."
+function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+
+# ruby
+export RUBYOPT=rubygems
+alias be='bundle exec'
+
+# grep config
+alias grep="grep --color=auto"
+
+# selinux
+alias seloff='su -c "echo 0 > /selinux/enforce"'
+
+alias mplayer='mplayer -msgcolor'
+alias shutdown_in="su -c 'sleep $1 && init 0'"
+
+PATH=$PATH:$HOME/.pandoc/bin
+
+export VAGRANT_DEFAULT_PROVIDER=lxc
+
+export PATH=/usr/local/share/npm/bin:$PATH
+
+. /etc/bashrc
+

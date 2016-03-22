@@ -1,0 +1,10 @@
+---
+
+system_packages:
+  - htop
+  - iftop
+
+application_packages:
+  - corebird
+  - google-chrome-stable
+

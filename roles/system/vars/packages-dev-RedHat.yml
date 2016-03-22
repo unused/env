@@ -1,0 +1,10 @@
+---
+
+development_packages:
+  - git
+  - vim
+  - kdiff3
+  - openssh
+  - the_silver_searcher
+  - pandoc
+
