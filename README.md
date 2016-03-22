@@ -2,8 +2,8 @@
 
 A minimal environment setup, using ansible to manage configs and packages.
 
-- Installs [Development Environment](/vars/packages-dev-RedHat.yml)
-- Installs [Common Software](/vars/packages-RedHat.yml)
+- Installs [Development Environment](/roles/system/vars/packages-dev-RedHat.yml)
+- Installs [Common Software](/roles/system/vars/packages-RedHat.yml)
 
 ## Usage
 
