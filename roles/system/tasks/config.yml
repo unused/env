@@ -7,8 +7,8 @@
   template: src=gitconfig.j2 dest={{ ansible_env.HOME}}/.gitconfig
 
 - name: Fetch vim config
-  git: repo=git@github.com:unused/.vim.git dest={{ ansible_env.HOME}}/.vim
+  git: repo=https://github.com/unused/.vim.git dest={{ ansible_env.HOME}}/.vim depth=1
 
 - name: Enable vim config
-  file: src={{ ansible_env.HOME }}/.vim/vimrc dest={{ ansible_env.HOME}}/.vimrc
+  file: src={{ ansible_env.HOME }}/.vim/vimrc dest={{ ansible_env.HOME }}/.vimrc state=link
 

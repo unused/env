@@ -13,7 +13,7 @@
     - 'google-chrome'
 
 - name: Install packages
-  dnf: name={{item}} state=present
+  dnf: name={{item}} state=latest
   become: yes
   with_flattened:
     - development_packages
