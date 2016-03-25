@@ -3,3 +3,6 @@
 - name: Add gnome templates
   copy: src=gnome/Templates/ dest={{ ansible_env.HOME}}/Templates/
 
+- name: Set default applications for gnome files
+  template: src=gnome/default-applications.list.j2 dest={{ ansible_env.HOME}}/.local/share/applications/defaults.list
+
