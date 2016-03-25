@@ -7,4 +7,6 @@ development_packages:
   - openssh
   - the_silver_searcher
   - pandoc
+  - docker
+  - docker-selinux
 
