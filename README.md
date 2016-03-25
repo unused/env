@@ -34,3 +34,8 @@ That's the point of a minimal setup. Fork it and adapt it to your needs.
 *System is setup, trash this thing now?*
 
 Nope, keep using it to make any changes to your systems. Ansible is clever and will check changes and run the specific commands. Take care for conflicts, if you adapt some Ansible managed file, you might end up with your changes getting overridden.
+
+## Setup Infos
+
+- With clipboard manager parcellite you can use `<ctrl-alt-h>` to get a short history of your last clipboard contents.
+
