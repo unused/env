@@ -1,5 +1,8 @@
 ---
 
+- name: Load WM specific packages
+  include_vars: "wm-config.yml"
+
 - name: Add gnome templates
   copy: src=gnome/Templates/ dest={{ ansible_env.HOME}}/Templates/
 

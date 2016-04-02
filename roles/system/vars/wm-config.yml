@@ -1,0 +1,6 @@
+---
+
+default_applications:
+  - name: "gvim.desktop"
+    types: ["application/xml", "text/plain", "text/x-ruby"]
+

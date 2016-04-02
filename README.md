@@ -39,3 +39,9 @@ Nope, keep using it to make any changes to your systems. Ansible is clever and w
 
 - With clipboard manager parcellite you can use `<ctrl-alt-h>` to get a short history of your last clipboard contents.
 
+## Setup Details
+
+### Windowmanager Gnome-Shell
+
+GVim is predefined default editor.
+
