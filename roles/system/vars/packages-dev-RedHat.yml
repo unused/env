@@ -4,6 +4,7 @@ development_packages:
   - git
   - vim
   - kdiff3
+  - gvim
   - openssh
   - the_silver_searcher
   - pandoc
