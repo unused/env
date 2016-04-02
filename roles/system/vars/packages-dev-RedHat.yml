@@ -5,8 +5,10 @@ development_packages:
   - vim
   - gvim
   - kdiff3
+  - gvim
   - openssh
   - the_silver_searcher
   - pandoc
-  - yakuake
+  - docker
+  - docker-selinux
 

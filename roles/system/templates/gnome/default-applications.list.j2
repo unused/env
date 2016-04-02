@@ -1,0 +1,8 @@
+# {{ ansible_managed }}
+
+[Default Applications]
+{% for application in default_applications %}
+{% for type in application.types %}
+{{type}}={{application.name}}
+{% endfor %}
+{% endfor %}
