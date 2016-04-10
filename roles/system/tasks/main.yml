@@ -4,9 +4,9 @@
   include: packages.yml
   tags: ['packages']
 
-- name: Configure window manager
-  include: windowmanager.yml
-  tags: ['wm']
+- name: Configure window manager gnome
+  include: gnome.yml
+  tags: ['wm', 'gnome']
 
 - name: Set general configurations
   include: config.yml

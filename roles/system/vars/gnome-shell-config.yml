@@ -1,0 +1,25 @@
+---
+
+gnome_default_applications:
+  - name: "gvim.desktop"
+    types: ["application/xml", "text/plain", "text/x-ruby"]
+
+gnome_configurations:
+  # Show date at clock
+  - { path: "org.gnome.desktop.interface", key: "clock-show-date", value: "true" }
+  # Save screenshots in ~/Pictures/Screenshots/
+  - { path: "org.gnome.gnome-screenshot", key: "auto-save-directory", value: "file://{{ ansible_env.HOME }}/Pictures/Screenshots" }
+  - { path: "org.gnome.gnome-screenshot", key: "last-save-directory", value: "file://{{ ansible_env.HOME }}/Pictures/Screenshots" }
+  # Save session
+  - { path: "org.gnome.SessionManager", key: "auto-save-session", value: "true" }
+  # Set desktop switch keys for up/down with j/k
+  - { path: "org.gnome.desktop.wm.keybindings", key: "switch-to-workspace-up", value: "['<Primary><Alt>k']" }
+  - { path: "org.gnome.desktop.wm.keybindings", key: "switch-to-workspace-down", value: "['<Primary><Alt>j']" }
+  - { path: "org.gnome.desktop.wm.keybindings", key: "move-to-workspace-up", value: "['<Primary><Shift><Alt>k']" }
+  - { path: "org.gnome.desktop.wm.keybindings", key: "move-to-workspace-down", value: "['<Primary><Shift><Alt>j']" }
+  # Adapt Files views (list-view with trees, open tabs at end, sort directories first, hide sidebar at start)
+  - { path: "org.gnome.nautilus.list-view", key: "use-tree-view", value: "true" }
+  - { path: "org.gnome.nautilus.preferences", key: "default-folder-viewer", value: "'list-view'" }
+  - { path: "org.gnome.nautilus.preferences", key: "sort-directories-first", value: "true" }
+  - { path: "org.gnome.nautilus.preferences", key: "tabs-open-position", value: "'end'" }
+  - { path: "org.gnome.nautilus.window-state", key: "start-with-sidebar", value: "false" }

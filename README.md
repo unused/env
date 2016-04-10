@@ -43,5 +43,5 @@ Nope, keep using it to make any changes to your systems. Ansible is clever and w
 
 ### Windowmanager Gnome-Shell
 
-GVim is predefined default editor.
+GVim is predefined default editor. To switch between workspaces up/down use `Super+Alt+j/k` or with `Shift` to move a window.
 
