@@ -23,3 +23,5 @@ gnome_configurations:
   - { path: "org.gnome.nautilus.preferences", key: "sort-directories-first", value: "true" }
   - { path: "org.gnome.nautilus.preferences", key: "tabs-open-position", value: "'end'" }
   - { path: "org.gnome.nautilus.window-state", key: "start-with-sidebar", value: "false" }
+  - { path: "org.gnome.settings-daemon.plugins.media-keys", key: "max-screencast-length", value: "600" }
+
