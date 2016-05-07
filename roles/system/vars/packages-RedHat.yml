@@ -8,4 +8,5 @@ application_packages:
   - corebird
   - google-chrome-stable
   - parcellite
+  - task
 
