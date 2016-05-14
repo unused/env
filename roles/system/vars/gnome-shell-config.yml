@@ -5,6 +5,8 @@ gnome_default_applications:
     types: ["application/xml", "text/plain", "text/x-ruby"]
 
 gnome_configurations:
+  # Hide menubar in gnome-terminal, wonder if there is a new path...
+  - { path: "org.gnome.Terminal.Legacy.Settings", key: "default-show-menubar", value: "false" }
   # Show date at clock
   - { path: "org.gnome.desktop.interface", key: "clock-show-date", value: "true" }
   # Save screenshots in ~/Pictures/Screenshots/
