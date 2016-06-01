@@ -11,4 +11,5 @@ development_packages:
   - pandoc
   - docker
   - docker-selinux
+  - golang
 

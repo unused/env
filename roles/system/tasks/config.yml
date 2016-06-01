@@ -1,16 +1,28 @@
 ---
 
+- name: Ensure some base directories are present
+  file: path={{ ansible_env.HOME }}/{{ item }} state=directory
+  with_items:
+    - Projects
+    - Projects/gocode
+    - Projects/stackoverflow
+    - Pictures/Wallpaper
+    - Software
+
 - name: Set bashrc
-  template: src=bashrc.j2 dest={{ ansible_env.HOME}}/.bashrc
+  template: src=bashrc.j2 dest={{ ansible_env.HOME }}/.bashrc
+
+- name: Set bash_profile
+  template: src=bash_profile.j2 dest={{ ansible_env.HOME }}/.bash_profile
 
 - name: Set git config
-  template: src=gitconfig.j2 dest={{ ansible_env.HOME}}/.gitconfig
+  template: src=gitconfig.j2 dest={{ ansible_env.HOME }}/.gitconfig
 
 - name: Fetch vim config
-  git: repo=https://github.com/unused/.vim.git dest={{ ansible_env.HOME}}/.vim depth=1
+  git: repo=https://github.com/unused/.vim.git dest={{ ansible_env.HOME }}/.vim depth=1
 
 - name: Enable vim config
   file: src={{ ansible_env.HOME }}/.vim/vimrc dest={{ ansible_env.HOME }}/.vimrc state=link
 
 - name: Set tmux config
-  template: src=tmux.conf.j2 dest={{ ansible_env.HOME}}/.tmux.conf
+  template: src=tmux.conf.j2 dest={{ ansible_env.HOME }}/.tmux.conf

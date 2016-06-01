@@ -10,12 +10,12 @@
   template: src=dnf/{{ item }}.repo.j2 dest=/etc/yum.repos.d/{{ item }}.repo
   become: yes
   with_items:
-    - 'google-chrome'
+    - "google-chrome"
 
 - name: Install packages
-  dnf: name={{item}} state=latest
+  dnf: name={{ item }} state=latest
   become: yes
   with_flattened:
-    - development_packages
-    - system_packages
-    - application_packages
+    - "{{ development_packages }}"
+    - "{{ system_packages }}"
+    - "{{ application_packages }}"

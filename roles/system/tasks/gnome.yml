@@ -18,5 +18,5 @@
 
 - name: Set gnome specific configurations
   command: 'gsettings set "{{ item.path }}" "{{ item.key }}" "{{ item.value }}"'
-  with_items: gnome_configurations
+  with_items: "{{ gnome_configurations }}"
 
