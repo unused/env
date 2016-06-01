@@ -9,4 +9,5 @@ application_packages:
   - google-chrome-stable
   - parcellite
   - task
+  - axel
 
