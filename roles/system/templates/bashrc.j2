@@ -4,14 +4,18 @@
 # .bashrc - christoph@lipautz.org
 #-------------------------------------------------------------------
 
-# define some colors
 RED_UL='\e[4;31m'
 GREEN='\e[0;32m'
-NC='\e[0m'
+NC='\e[0m'    # reset colors
 
-if [ -n "$(type -t rvm)" ]; then GIT_BRANCH='$(__git_ps1 "(%s)")'; fi
+# prevent error if __git_ps1 helper is missing
+if [ -n "$(command -v __git_ps1) > /dev/null 2&>1" ];
+  then GIT_BRANCH='$(__git_ps1 "(%s)")'
+  else GIT_BRANCH=''
+fi
 
-export PS1="[${RED_UL}\u@\h:\W \t.\d${GREEN}${GIT_BRANCH}${NC}] \n > "
+# default prompt
+PS1="[${RED_UL}\u@\h:\W \t.\d${GREEN}${GIT_BRANCH}${NC}] \n > "
 
 # enable bash completion
 if [ -f /etc/bash_completion ]; then

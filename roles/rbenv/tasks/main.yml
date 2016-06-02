@@ -1,0 +1,21 @@
+---
+
+- name: Fetch rbenv
+  git:
+    repo: https://github.com/rbenv/rbenv.git
+    dest: "{{ ansible_env.HOME }}/.rbenv"
+    depth: 1
+
+- name: Fetch ruby-build
+  git:
+    repo: https://github.com/rbenv/ruby-build.git
+    dest: "{{ ansible_env.HOME }}/.rbenv/plugins/ruby-build"
+    depth: 1
+
+- name: Add rbenv cmd line tool
+  lineinfile:
+    dest: "{{ ansible_env.HOME }}/.bash_profile"
+    line: "PATH=$HOME/.rbenv/bin:$PATH"
+    state: present 
+    insertbefore: "export PATH"
+
