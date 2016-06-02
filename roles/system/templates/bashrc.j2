@@ -8,7 +8,8 @@
 RED_UL='\e[4;31m'
 GREEN='\e[0;32m'
 NC='\e[0m'
-GIT_BRANCH='$(__git_ps1 "(%s)")'
+
+if [ -n "$(type -t rvm)" ]; then GIT_BRANCH='$(__git_ps1 "(%s)")'; fi
 
 export PS1="[${RED_UL}\u@\h:\W \t.\d${GREEN}${GIT_BRANCH}${NC}] \n > "
 
