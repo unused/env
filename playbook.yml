@@ -2,4 +2,4 @@
 
 - hosts: localhost
   connection: local
-  roles: [ system, rbenv ]
+  roles: [ system, gnome-shell, rbenv ]
