@@ -19,3 +19,7 @@
     - "{{ development_packages }}"
     - "{{ system_packages }}"
     - "{{ application_packages }}"
+
+- name: Remove command-not-found
+  dnf: name=PackageKit-command-not-found state=absent
+  become: yes
