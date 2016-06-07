@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if ! type "primusrun" > /dev/null; then
+  echo "using primusrun, starting minecraft"
+  primusrun java -jar Minecraft.jar
+elif ! type "optirun" > /dev/null; then
+  echo "using optirun, starting minecraft"
+  optirun -b primus java -jar Minecraft.jar
+else
+  echo "starting minecraft"
+  java -jar Minecraft.jar
+fi
+
