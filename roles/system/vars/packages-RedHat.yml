@@ -10,4 +10,6 @@ application_packages:
   - parcellite
   - task
   - axel
+  - ffmpeg
+  - mplayer
 
