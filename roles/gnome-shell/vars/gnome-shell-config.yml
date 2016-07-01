@@ -2,7 +2,7 @@
 
 gnome_default_applications:
   - name: "gvim.desktop"
-    types: ["application/xml", "text/plain", "text/x-ruby"]
+    types: ["application/xml", "text/plain", "text/html", "text/x-ruby"]
 
 gnome_configurations:
   # Hide menubar in gnome-terminal, wonder if there is a new path...
