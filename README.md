@@ -39,9 +39,13 @@ Nope, keep using it to make any changes to your systems. Ansible is clever and w
 
 - With clipboard manager parcellite you can use `<ctrl-alt-h>` to get a short history of your last clipboard contents.
 
+## Tips and hints
+
+- In shell use `<ctrl+x><ctrl-e>` to open vim to type a long command.
+
 ## Setup Details
 
 ### Windowmanager Gnome-Shell
 
-GVim is predefined default editor. To switch between workspaces up/down use `Super+Alt+j/k` or with `Shift` to move a window.
+GVim is predefined default editor. To switch between workspaces up/down use `<super-alt-j/k>` or with `shift` to move a window.
 
