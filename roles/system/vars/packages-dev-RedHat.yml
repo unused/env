@@ -12,4 +12,5 @@ development_packages:
   - docker
   - docker-selinux
   - golang
+  - ctags
 
