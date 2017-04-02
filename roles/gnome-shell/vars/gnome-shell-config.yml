@@ -22,7 +22,7 @@ gnome_configurations:
   # Adapt Files views (list-view with trees, open tabs at end, sort directories first, hide sidebar at start)
   - { path: "org.gnome.nautilus.list-view", key: "use-tree-view", value: "true" }
   - { path: "org.gnome.nautilus.preferences", key: "default-folder-viewer", value: "'list-view'" }
-  - { path: "org.gnome.nautilus.preferences", key: "sort-directories-first", value: "true" }
+  # - { path: "org.gnome.nautilus.preferences", key: "sort-directories-first", value: "true" } # no longer present
   - { path: "org.gnome.nautilus.preferences", key: "tabs-open-position", value: "'end'" }
   - { path: "org.gnome.nautilus.window-state", key: "start-with-sidebar", value: "false" }
   - { path: "org.gnome.settings-daemon.plugins.media-keys", key: "max-screencast-length", value: "600" }

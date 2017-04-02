@@ -1,0 +1,12 @@
+---
+
+ruby_gems:
+  - airstream
+  - mailcatcher
+  - git_remote_branch
+  - brakeman
+  - rubocop
+  - rspec
+  - guard
+  - rails
+

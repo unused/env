@@ -1,0 +1,6 @@
+---
+
+- name: Install npm
+  include: npm.yml
+  tags: ['npm']
+

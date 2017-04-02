@@ -1,0 +1,8 @@
+---
+
+- name: Load npm packages to install
+  include_vars: "packages.yml"
+
+- name: Install npm packages
+  npm: name={{ item }} state=latest
+  with: "{{ npm_packages }}"

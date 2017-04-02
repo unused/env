@@ -13,4 +13,6 @@ development_packages:
   - docker-selinux
   - golang
   - ctags
+  - graphviz
+  - plantuml
 

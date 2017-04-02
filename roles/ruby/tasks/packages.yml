@@ -1,0 +1,8 @@
+---
+
+- name: Load ruby gems to install
+  include_vars: "packages.yml"
+
+- name: Install ruby gems
+  gem: name={{ item }} state=latest
+  with: "{{ ruby_gems }}"

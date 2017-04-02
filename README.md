@@ -5,7 +5,7 @@ A minimal Linux environment setup, using Ansible to manage configs and packages.
 - Installs [Development Environment](/roles/system/vars/packages-dev-RedHat.yml)
 - Installs [Common Software](/roles/system/vars/packages-RedHat.yml)
 - Sets some [Gnome File Templates](/roles/system/files/gnome/Templates/)
-- Configures GIT, vim, bash
+- Configures git, vim, bash, rbenv, npm, golang, gnome-shell, minecraft.
 
 ## Usage
 
@@ -15,6 +15,8 @@ Actually, there may be some Ansible dependencies missing but you should get pret
 
 ```sh
 $ su -c 'dnf install libselinux-python python-dnf'
+$ make
+$ make ARGS=--tags=javascript # run tagged tasks only
 ```
 
 ## FAQ
@@ -35,17 +37,10 @@ That's the point of a minimal setup. Fork it and adapt it to your needs.
 
 Nope, keep using it to make any changes to your systems. Ansible is clever and will check changes and run the specific commands. Take care for conflicts, if you adapt some Ansible managed file, you might end up with your changes getting overridden.
 
-## Setup Infos
+## Setup Infos, Details and Hints
 
-- With clipboard manager parcellite you can use `<ctrl-alt-h>` to get a short history of your last clipboard contents.
+- The clipboard manager parcellite provides a list of your last clipboard contents. You can access it with global shortcut `<ctrl-alt-h>`.
+- To switch between workspaces (up/down) in gnome-shell use `<super-alt-j/k>` or with `shift` to move a window.
+- In any terminal use `<ctrl+x><ctrl-e>` to open vim and type a long command.
 
-## Tips and hints
-
-- In shell use `<ctrl+x><ctrl-e>` to open vim to type a long command.
-
-## Setup Details
-
-### Windowmanager Gnome-Shell
-
-GVim is predefined default editor. To switch between workspaces up/down use `<super-alt-j/k>` or with `shift` to move a window.
 
