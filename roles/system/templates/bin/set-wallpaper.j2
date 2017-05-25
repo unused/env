@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# {{ ansible_managed }}
+
+# example usage, choose a random wallpaper
+#   $ ls -1 ~/Pictures/Wallpapers/ | sort -R | head -n1 | set-wallpaper
+
+#if $1
+#gsettings set org.gnome.desktop.background picture-uri "file://`realpath $1`"
+#else
+gsettings set org.gnome.desktop.background picture-uri "file://`read`"

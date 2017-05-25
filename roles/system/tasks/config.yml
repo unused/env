@@ -18,11 +18,5 @@
 - name: Set git config
   template: src=gitconfig.j2 dest={{ ansible_env.HOME }}/.gitconfig
 
-- name: Fetch vim config
-  git: repo=https://github.com/unused/.vim.git dest={{ ansible_env.HOME }}/.vim depth=1
-
-- name: Enable vim config
-  file: src={{ ansible_env.HOME }}/.vim/vimrc dest={{ ansible_env.HOME }}/.vimrc state=link
-
 - name: Set tmux config
   template: src=tmux.conf.j2 dest={{ ansible_env.HOME }}/.tmux.conf

@@ -2,9 +2,13 @@
 
 - name: Install all kind of stuff on the system
   include: packages.yml
-  tags: ['packages']
+  tags: ['system', 'packages']
 
 - name: Set general configurations
   include: config.yml
-  tags: ['config']
+  tags: ['system', 'config']
+
+- name: Add some custom scripts
+  include: scripts.yml
+  tags: ['system', 'scripts']
 

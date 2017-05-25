@@ -1,0 +1,11 @@
+---
+
+- name: Ensure vim spell directory exists
+  file: path={{ ansible_env.HOME }}/.vim/spell/ state=directory
+
+- name: Download german language spell files for vim
+  get_url: dest={{ ansible_env.HOME }}/.vim/spell/ url={{ item }}
+  with_items:
+    - http://ftp.vim.org/pub/vim/unstable/runtime/spell/de.utf-8.spl
+    - http://ftp.vim.org/pub/vim/unstable/runtime/spell/de.utf-8.sug
+

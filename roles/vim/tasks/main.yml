@@ -1,0 +1,10 @@
+---
+
+- name: Setup vim environment
+  include: setup.yml
+  tags: ['vim', 'setup']
+
+- name: Add vim spell dictionaries
+  include: dictionaries.yml
+  tags: ['vim']
+

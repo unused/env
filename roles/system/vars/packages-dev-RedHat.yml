@@ -2,8 +2,6 @@
 
 development_packages:
   - git
-  - vim
-  - gvim
   - kdiff3
   - tmux
   - openssh

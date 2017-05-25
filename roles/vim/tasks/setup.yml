@@ -1,0 +1,22 @@
+---
+
+- name: Install vim
+  dnf: name=vim state=latest
+  become: yes
+
+- name: Install gvim
+  dnf: name=gvim state=latest
+  become: yes
+
+- name: Fetch vim config
+  git: repo=https://github.com/unused/.vim.git dest={{ ansible_env.HOME }}/.vim depth=1
+
+- name: Add github remote to update changes
+  git_config: repo={{ ansible_env.HOME }}/.vim name={{ item.key }} value={{ item.value }} scope=local
+  with_items:
+    - { key: 'remote.github.url', value: 'git@github.com:unused/.vim.git' }
+    - { key: 'remote.github.fetch', value: '+refs/heads/*:refs/remotes/github/*' }
+
+- name: Enable vim config
+  file: src={{ ansible_env.HOME }}/.vim/vimrc dest={{ ansible_env.HOME }}/.vimrc state=link
+

@@ -2,4 +2,4 @@
 
 - hosts: localhost
   connection: local
-  roles: [ system, gnome-shell, ruby, javascript ]
+  roles: [ system, gnome-shell, ruby, javascript, vim ]
