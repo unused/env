@@ -4,6 +4,7 @@ development_packages:
   - git
   - kdiff3
   - tmux
+  - tmuxinator
   - openssh
   - the_silver_searcher
   - pandoc
