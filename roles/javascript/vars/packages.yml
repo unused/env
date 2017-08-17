@@ -5,4 +5,5 @@ npm_packages:
   - json-server
   - eslint
   - create-react-app
+  - node-inspector
 

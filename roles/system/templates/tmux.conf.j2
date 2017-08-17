@@ -10,8 +10,12 @@ bind k select-pane -U
 bind l select-pane -R
 
 # set window split
-bind-key v split-window -h
-bind-key b split-window
+bind-key c new-window -c "#{pane_current_path}"
+bind-key b split-window -c "#{pane_current_path}"
+bind-key v split-window -h -c "#{pane_current_path}"
 
 # use vi keys
 set-window-option -g mode-keys vi
+
+# sync panes on/off
+bind C-e set-window-option synchronize-panes
