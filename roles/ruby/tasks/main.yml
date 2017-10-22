@@ -1,6 +1,6 @@
 ---
 
 - name: Install rbenv
-  include: rbenv.yml
+  import_tasks: rbenv.yml
   tags: ['rbenv']
 

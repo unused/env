@@ -1,6 +1,6 @@
 ---
 
 - name: Install npm
-  include: npm.yml
+  import_tasks: npm.yml
   tags: ['npm']
 

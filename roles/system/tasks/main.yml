@@ -1,14 +1,14 @@
 ---
 
 - name: Install all kind of stuff on the system
-  include: packages.yml
+  import_tasks: packages.yml
   tags: ['system', 'packages']
 
 - name: Set general configurations
-  include: config.yml
+  import_tasks: config.yml
   tags: ['system', 'config']
 
 - name: Add some custom scripts
-  include: scripts.yml
+  import_tasks: scripts.yml
   tags: ['system', 'scripts']
 
