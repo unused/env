@@ -1,0 +1,7 @@
+---
+
+- name: Install minikube
+  get_url:
+    url: https://storage.googleapis.com/minikube/releases/v0.22.3/minikube-linux-amd64
+    dest: "{{ ansible_env.HOME }}/bin/minikube"
+    mode: 0755

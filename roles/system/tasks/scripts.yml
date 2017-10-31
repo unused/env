@@ -4,6 +4,9 @@
   file: path={{ ansible_env.HOME }}/bin state=directory
 
 - name: Add some custom scripts
-  template: src=bin/{{ item }}.j2 dest={{ ansible_env.HOME }}/bin/{{ item }}
+  template:
+    src: bin/{{ item }}.j2
+    dest: "{{ ansible_env.HOME }}/bin/{{ item }}"
+    mode: 0755
   with_items:
     - set-wallpaper
