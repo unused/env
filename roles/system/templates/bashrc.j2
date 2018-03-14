@@ -54,6 +54,10 @@ export VAGRANT_DEFAULT_PROVIDER=lxc
 # use vim as default editor
 export EDITOR=vim
 
+# use rbenv for managing ruby version
 eval "$(rbenv init -)"
+
+# init kubectl bash completion
+source <(kubectl completion bash)
 
 . /etc/bashrc

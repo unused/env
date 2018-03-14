@@ -2,6 +2,26 @@
 
 - name: Install minikube
   get_url:
-    url: https://storage.googleapis.com/minikube/releases/v0.22.3/minikube-linux-amd64
+    url: https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
     dest: "{{ ansible_env.HOME }}/bin/minikube"
     mode: 0755
+
+# https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#kvm-driver
+- name: Install minikube kvm driver packages
+  dnf: name={{ item }} state=latest
+  become: yes
+  with_items:
+    - libvirt-daemon-kvm
+    - qemu-kvm
+
+- name: Install minikube dependency docker machine kvm
+  get_url:
+    url: https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.10.0/docker-machine-driver-kvm-centos7
+    dest: "{{ ansible_env.HOME }}/bin/docker-machine-driver-kvm"
+    mode: 0755
+
+#- name: Add me user to the libvirt group to enable docker machine kvm
+  #user:
+    #name: "{{ ansible_env.USER }}"
+    #groups: libvirt
+    #append: yes
