@@ -6,4 +6,6 @@ npm_packages:
   - eslint
   - create-react-app
   - node-inspector
+  - svgo
+  - imagemin
 
