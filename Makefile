@@ -5,8 +5,10 @@ OPTS=-K -i inventory
 all:
 	$(CMD) $(OPTS) playbook.yml ${ARGS}
 
-.PHONY: all test
+prepare:
+	su -c 'dnf install libselinux-python python-dnf ansible'
 
 test:
-	echo "todo"
+	echo "todo o.O"
 
+.PHONY: all prepare test

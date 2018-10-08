@@ -14,7 +14,7 @@ Install Ansible, then run `make`.
 Actually, there may be some Ansible dependencies missing but you should get pretty clear warnings while executing. For Fedora 23 you have to prepare the system with some python libs.
 
 ```sh
-$ su -c 'dnf install libselinux-python python-dnf'
+$ make prepare # uses dnf to install some required packages
 $ make
 $ make ARGS=--tags=javascript # run tagged tasks only
 ```

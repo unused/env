@@ -4,6 +4,7 @@ system_packages:
   - htop
   - iftop
 
+# Note: mplayer and ffmpeg require rpm fusion repos
 application_packages:
   - corebird
   - google-chrome-stable
