@@ -15,4 +15,5 @@ development_packages:
   - graphviz
   - plantuml
   - jq
+  - fzf
 
