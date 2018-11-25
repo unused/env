@@ -1,5 +1,8 @@
 ---
 
+hourly:
+  - randomwallpaper
+
 daily:
   - 'DISPLAY=:0 google-chrome "https://www.packtpub.com/packt/offers/free-learning"'
 

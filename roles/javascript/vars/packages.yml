@@ -1,11 +1,9 @@
 ---
 
 npm_packages:
-  - browser-sync
   - json-server
-  - eslint
   - create-react-app
-  - node-inspector
+  - now
   - svgo
   - imagemin
 

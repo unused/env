@@ -1,0 +1,6 @@
+---
+
+- name: Download exercism CLI
+  get_url:
+    url: "https://github.com/exercism/cli/releases/download/{{ exercism_version }}/exercism-linux-64bit.tgz"
+    dest: "{{ ansible_env.HOME }}/Software/exercism"

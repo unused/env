@@ -8,6 +8,7 @@ development_packages:
   - openssh
   - the_silver_searcher
   - pandoc
+  - podman
   - docker
   - docker-selinux
   - golang
