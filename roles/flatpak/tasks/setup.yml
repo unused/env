@@ -1,0 +1,7 @@
+---
+
+- name: Install flatpak deployment framework
+  become: yes
+  dnf: name={{ item }} state=present
+  with_items:
+    - flatpak

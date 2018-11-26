@@ -23,7 +23,8 @@ $ make ARGS=--tags=javascript # run tagged tasks only
 
 Available roles are:
 
-- system (default) ... Base linux system settings.
+- system (default) ... Base Linux system settings.
+- flatpak (default) ... Flatpak application deployment framework and packages.
 - gnome-shell (default) ... Gnome window manager configuration.
 - vim (default) ... Configuration via
   [unused/.vim](https://github.com/unused/.vim).

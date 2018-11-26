@@ -1,0 +1,10 @@
+---
+
+- name: Load flatpak packages to install
+  include_vars: "packages.yml"
+
+- name: Install flatpak packages
+  become: yes
+  flatpak: name={{ item }} state=present
+  with_items:
+    - "{{ packages }}"
