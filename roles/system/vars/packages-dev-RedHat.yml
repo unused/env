@@ -6,6 +6,7 @@ development_packages:
   - tmux
   - tmuxinator
   - openssh
+  - openssl-devel
   - the_silver_searcher
   - pandoc
   - podman

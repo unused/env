@@ -3,6 +3,11 @@
 - name: Load ruby gems to install
   include_vars: "packages.yml"
 
+- name: Install ruby dependencies
+  become: yes
+  dnf: name={{ item }} state=present
+  with: "{{ packages }}"
+
 - name: Install ruby gems
   gem: name={{ item }} state=latest
   with: "{{ ruby_gems }}"

@@ -1,5 +1,10 @@
 ---
 
+packages:
+  - openssl-devel
+  - readline-devel
+  - zlib-devel
+
 ruby_gems:
   - airstream
   - mailcatcher
