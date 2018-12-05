@@ -1,5 +1,8 @@
 ---
 
+packages:
+  - nodejs-yarn
+
 npm_packages:
   - json-server
   - create-react-app
