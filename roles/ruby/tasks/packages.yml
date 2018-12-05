@@ -6,8 +6,10 @@
 - name: Install ruby dependencies
   become: yes
   dnf: name={{ item }} state=present
-  with: "{{ packages }}"
+  with_flattened:
+    - "{{ packages }}"
 
-- name: Install ruby gems
-  gem: name={{ item }} state=latest
-  with: "{{ ruby_gems }}"
+#- name: Install ruby gems
+  #gem: name={{ item }} state=latest
+  #with_flattened:
+    #- "{{ ruby_gems }}"

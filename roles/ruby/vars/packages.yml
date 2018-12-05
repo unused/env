@@ -1,7 +1,17 @@
 ---
 
 packages:
+  - ruby
+  - ruby-devel
+  - rubygems
+  - gcc
+  - gcc-c++
+  - bzip2
   - openssl-devel
+  - libyaml-devel
+  - libffi-devel
+  - gdbm-devel
+  - ncurses-devel
   - readline-devel
   - zlib-devel
 

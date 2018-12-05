@@ -1,6 +1,10 @@
 ---
 
+- name: Install ruby dependencies
+  import_tasks: packages.yml
+  tags: ['ruby', 'setup']
+
 - name: Install rbenv
   import_tasks: rbenv.yml
-  tags: ['rbenv']
+  tags: ['ruby', 'rbenv']
 

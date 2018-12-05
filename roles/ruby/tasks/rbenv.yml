@@ -16,6 +16,6 @@
   lineinfile:
     dest: "{{ ansible_env.HOME }}/.bash_profile"
     line: "PATH=$HOME/.rbenv/bin:$PATH"
-    state: present 
+    state: present
     insertbefore: "export PATH"
 
