@@ -5,3 +5,8 @@
 - [ ] Change storage to overlay2 creating file `/etc/docker/daemon.json` with
       contents `{ "storage-driver": "overlay2" }`
 - [ ] Configure selinux to accept container in /home
+
+```
+$ podman run --name local-mongodb -d mongo
+```
+

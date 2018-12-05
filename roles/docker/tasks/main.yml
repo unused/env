@@ -1,0 +1,9 @@
+---
+
+- name: Install docker packages
+  import_tasks: packages.yml
+  tags: ['docker', 'packages']
+
+#- name: Setup some docker container
+  #import_tasks: container.yml
+  #tags: ['docker', 'setup']

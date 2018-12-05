@@ -1,0 +1,6 @@
+---
+
+packages:
+  - podman
+  - docker
+  - docker-selinux
