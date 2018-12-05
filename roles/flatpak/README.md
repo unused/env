@@ -1,2 +1,3 @@
 # Flatpak
 
+- [ ] install peek, spotify, ...
