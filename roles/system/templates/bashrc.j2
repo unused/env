@@ -48,6 +48,10 @@ alias pretty-json='python -m json.tool'
 # tmuxinator
 alias tm='tmuxinator'
 
+# vim + fzf
+alias fim='vim $(fzf)'
+alias gfim='gvim $(fzf)'
+
 # vagrant
 export VAGRANT_DEFAULT_PROVIDER=lxc
 
@@ -56,5 +60,8 @@ export EDITOR=vim
 
 # init kubectl bash completion
 # source <(kubectl completion bash)
+
+# init rbenv
+eval "$(rbenv init -)"
 
 . /etc/bashrc
