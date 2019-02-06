@@ -16,6 +16,8 @@ bind-key v split-window -h -c "#{pane_current_path}"
 
 # use vi keys
 set-window-option -g mode-keys vi
+bind-key -T copy-mode-vi 'v' send -X begin-selection
+bind-key -T copy-mode-vi 'y' send -X copy-selection-and-cancel
 
 # sync panes on/off
 bind C-e set-window-option synchronize-panes
