@@ -3,6 +3,11 @@
 
 run, then...
 
+```sh
+$ rbenv
+$ update-rbenv # shorthand to update rbenv and fetch versions
+```
+
 ## rbenv
 
 ```sh

@@ -7,4 +7,3 @@
 - name: Install rbenv
   import_tasks: rbenv.yml
   tags: ['ruby', 'rbenv']
-

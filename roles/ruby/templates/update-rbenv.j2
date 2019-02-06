@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# {{ ansible_managed }}
+
+cd ~/.rbenv && git pull origin master && cd -
+cd ~/.rbenv/plugins/ruby-build && git pull origin master && cd -

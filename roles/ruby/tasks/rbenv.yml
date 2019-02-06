@@ -19,3 +19,5 @@
     state: present
     insertbefore: "export PATH"
 
+- name: Add shorthand script to update rbenv
+  template: src=update-rbenv.j2 dest={{ ansible_env.HOME }}/.rbenv/bin/update-rbenv
