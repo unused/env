@@ -2,5 +2,5 @@
 
 - hosts: localhost
   connection: local
-  roles: [ system, flatpak, gnome-shell, ruby, javascript, vim ]
+  roles: [ system, flatpak, gnome-shell, vim ]
 

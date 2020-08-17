@@ -1,9 +1,9 @@
 ---
 
-- name: Load docker packages to install
+- name: Load podman packages to install
   include_vars: "packages.yml"
 
-- name: Install docker and podman packages
+- name: Install podman packages
   become: yes
   dnf: name={{ item }} state=present
   with_items:

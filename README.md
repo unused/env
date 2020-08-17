@@ -5,14 +5,15 @@ A minimal Linux environment setup, using Ansible to manage configs and packages.
 - Installs [Development Environment](/roles/system/vars/packages-dev-RedHat.yml)
 - Installs [Common Software](/roles/system/vars/packages-RedHat.yml)
 - Sets some [Gnome File Templates](/roles/system/files/gnome/Templates/)
-- Configures git, vim, bash, rbenv, npm, golang, gnome-shell, minecraft.
+- Configures git, vim, bash, gnome-shell, minecraft.
+- Installs [Toolbox](https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/)
 
 ## Usage
 
 Install Ansible, then run `make`.
 
 Actually, there may be some Ansible dependencies missing but you should get
-pretty clear warnings while executing. For Fedora 23 you have to prepare the
+pretty clear warnings while executing. For Fedora you have to init the
 system with some python libs.
 
 ```sh
@@ -28,13 +29,8 @@ Available roles are:
 - gnome-shell (default) ... Gnome window manager configuration.
 - vim (default) ... Configuration via
   [unused/.vim](https://github.com/unused/.vim).
-- ruby (default) ... Programming language development environment.
-- javascript (default) ... Programming language development environment.
-- bumblebee ... Nvidia optimus Linux driver setup.
 - kubernetes ... Local kubernetes development and testing environment.
-- cron ... WIP
-- docker ... WIP
-- exercism ... WIP
+- podman ... Container image development environment.
 
 ## FAQ
 
@@ -73,10 +69,4 @@ overridden.
 - To switch between workspaces (up/down) in gnome-shell use `<super-alt-j/k>`
   or with `shift` to move a window.
 - In any terminal use `<ctrl+x><ctrl-e>` to open vim and type a long command.
-- [imagemin] and [svgo] are nice cli tools to optimize images. Note:
-  [images.guide] is a good read by Addy Osmani.
-
-[imagemin]: https://github.com/imagemin/imagemin-cli
-[svgo]: https://github.com/svg/svgo
-[images.guide]: https://images.guide/
 

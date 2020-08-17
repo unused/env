@@ -6,18 +6,17 @@
 - name: Load OS specific development packages
   include_vars: "packages-dev-{{ ansible_os_family }}.yml"
 
-# TODO: this is OS specific
-- name: Install the rpmfusion free repo packages
-  become: yes
-  dnf: name={{ item }} state=present
-  with_items:
-    - http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm
+# - name: Install the rpmfusion free repo packages
+#   become: yes
+#   dnf: name={{ item }} state=present
+#   with_items:
+#     - http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm
 
-- name: Add dnf repos
-  template: src=dnf/{{ item }}.repo.j2 dest=/etc/yum.repos.d/{{ item }}.repo
-  become: yes
-  with_items:
-    - "google-chrome"
+# - name: Add dnf repos
+#   template: src=dnf/{{ item }}.repo.j2 dest=/etc/yum.repos.d/{{ item }}.repo
+#   become: yes
+#   with_items:
+#     - "google-chrome"
 
 - name: Install packages
   dnf: name={{ item }} state=latest
