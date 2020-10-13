@@ -5,6 +5,6 @@
 
 - name: Install latex and pandoc packages
   become: yes
-  flatpak: name={{ item }} state=present
+  dnf: name={{ item }} state=present
   with_items:
     - "{{ packages }}"

@@ -4,9 +4,9 @@ packages:
   - nodejs-yarn
 
 npm_packages:
-  - json-server
+  - typescript
   - create-react-app
-  - now
+  - json-server
   - svgo
   - imagemin
 
