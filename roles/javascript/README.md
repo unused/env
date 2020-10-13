@@ -1,5 +1,5 @@
 
-# javascript ansible role
+# JavaScript Development Environment
 
 create `~/.npmrc` file to configure...
   - local global packages to be located at `~/.npm-packages/`

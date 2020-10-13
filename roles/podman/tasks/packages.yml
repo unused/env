@@ -5,6 +5,6 @@
 
 - name: Install podman packages
   become: yes
-  dnf: name={{ item }} state=present
-  with_items:
-    - "{{ packages }}"
+  dnf:
+    name: "{{ packages }}"
+    state: present

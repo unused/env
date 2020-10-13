@@ -2,8 +2,8 @@
 
 - name: Setup minikube
   import_tasks: minikube.yml
-  tags: ['kubernetes', 'k8s']
+  tags: ['minikube']
 
 - name: Setup kubectl
   import_tasks: kubectl.yml
-  tags: ['kubernetes', 'k8s']
+  tags: ['dev', 'kubernetes', 'k8s']

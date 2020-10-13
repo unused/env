@@ -2,5 +2,5 @@
 
 - name: Install and setup exercism
   include: exercism.yml
-  tags: ['exercism']
+  tags: ['exercism', 'dev']
 

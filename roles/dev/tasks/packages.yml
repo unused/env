@@ -1,0 +1,10 @@
+---
+
+- name: Load development packages
+  include_vars: "packages.yml"
+
+- name: Install packages
+  become: yes
+  dnf:
+    name: "{{ development_packages }}"
+    state: latest

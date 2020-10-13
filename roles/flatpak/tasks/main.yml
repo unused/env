@@ -2,9 +2,9 @@
 
 - name: Setup flatpak
   import_tasks: setup.yml
-  tags: ['flatpak', 'setup']
+  tags: ['system', 'flatpak', 'setup']
 
 - name: Manage flatpak packages
   import_tasks: packages.yml
-  tags: ['docker', 'packages']
+  tags: ['system', 'packages']
 

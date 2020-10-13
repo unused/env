@@ -1,4 +1,3 @@
 
-# minecraft
-
+# Minecraft Linux Client
 

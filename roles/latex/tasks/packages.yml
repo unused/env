@@ -1,0 +1,10 @@
+---
+
+- name: Load latex and pandoc packages to install
+  include_vars: "packages.yml"
+
+- name: Install latex and pandoc packages
+  become: yes
+  flatpak: name={{ item }} state=present
+  with_items:
+    - "{{ packages }}"

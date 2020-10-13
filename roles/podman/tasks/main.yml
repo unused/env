@@ -2,4 +2,4 @@
 
 - name: Install podman packages
   import_tasks: packages.yml
-  tags: ['podman', 'packages']
+  tags: ['system', 'podman', 'toolbox']

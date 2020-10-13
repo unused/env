@@ -1,0 +1,7 @@
+---
+
+development_packages:
+  - git
+  - ruby
+  - nodejs
+  - golang

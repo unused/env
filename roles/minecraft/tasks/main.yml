@@ -3,7 +3,6 @@
 - name: Ensure Minecraft directory exists
   file: path={{ ansible_env.HOME }}/.minecraft/ state=directory
 
-
 - name: Download Minecraft launcher
   get_url:
     url: "http://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar"
@@ -13,4 +12,3 @@
   template:
     src: minecraft-launcher.sh.j2
     dest: "{{ ansible_env.HOME }}/.minecraft/minecraft-launcher.sh"
-

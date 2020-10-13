@@ -1,5 +1,5 @@
 
-# ruby ansible role
+# Ruby Environment using Rbenv
 
 run, then...
 

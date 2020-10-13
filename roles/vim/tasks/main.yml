@@ -2,9 +2,9 @@
 
 - name: Setup vim environment
   import_tasks: setup.yml
-  tags: ['vim', 'setup']
+  tags: ['system', 'vim', 'setup']
 
 - name: Add vim spell dictionaries
   import_tasks: dictionaries.yml
-  tags: ['vim']
+  tags: ['system', 'vim']
 

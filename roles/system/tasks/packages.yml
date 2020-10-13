@@ -3,28 +3,17 @@
 - name: Load OS specific packages
   include_vars: "packages-{{ ansible_os_family }}.yml"
 
-- name: Load OS specific development packages
-  include_vars: "packages-dev-{{ ansible_os_family }}.yml"
-
-# - name: Install the rpmfusion free repo packages
-#   become: yes
-#   dnf: name={{ item }} state=present
-#   with_items:
-#     - http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm
-
-# - name: Add dnf repos
-#   template: src=dnf/{{ item }}.repo.j2 dest=/etc/yum.repos.d/{{ item }}.repo
-#   become: yes
-#   with_items:
-#     - "google-chrome"
+- name: Install the rpmfusion free repo packages
+  become: yes
+  dnf:
+    name: ['http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm']
+    state: present
 
 - name: Install packages
-  dnf: name={{ item }} state=latest
   become: yes
-  with_flattened:
-    - "{{ development_packages }}"
-    - "{{ system_packages }}"
-    - "{{ application_packages }}"
+  dnf:
+    name: "{{ query('flattened', ['{{ tools_packages }}', '{{ system_packages }}', '{{ application_packages }}']) }}"
+    state: latest
 
 - name: Remove command-not-found
   dnf: name=PackageKit-command-not-found state=absent
