@@ -28,3 +28,6 @@ application_packages:
   - axel
   - ffmpeg
   - mplayer
+  - gpaste
+  - gpaste-ui
+  - gnome-shell-extension-gpaste

@@ -2,3 +2,6 @@
 
 - name: Ensure users bin directory exists
   file: path={{ ansible_env.HOME }}/bin state=directory
+
+- name: Add timer utility script
+  template: src=timer.j2 dest={{ ansible_env.HOME }}/bin/timer

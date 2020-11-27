@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+# {{ ansible_managed }}
+
+echo `date` starting timer for $1 minutes
+
+(( SECONDS = $1 * 60 ))
+
+
+sleep $SECONDS && notify-send Timer $2

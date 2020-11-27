@@ -16,6 +16,10 @@ fi
 
 # default prompt
 PS1="[${RED_UL}\u@\h:\W \t.\d${GREEN}${GIT_BRANCH}${NC}] \n > "
+# adapted prompt for toolbox
+if [ "$(hostname)" = toolbox ]; then
+  PS1="[${BROWN_UL}\u@\h:\W \t.\d${GREEN}${GIT_BRANCH}${NC}] \n > "
+fi
 
 # enable bash completion
 if [ -f /etc/bash_completion ]; then

@@ -3,7 +3,7 @@ CMD=ansible-playbook
 OPTS=-K -i inventory
 
 system:
-	$(CMD) $(OPTS) playbook.yml --tags=system
+	$(CMD) $(OPTS) playbook.yml --tags=system,gnome-shell
 
 setup:
 	sudo dnf install -y ansible

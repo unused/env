@@ -61,8 +61,6 @@ overridden.
 
 ## Setup Infos, Details and Hints
 
-- The clipboard manager parcellite provides a list of your last clipboard
-  contents. You can access it with global shortcut `<ctrl-alt-h>`.
 - To switch between workspaces (up/down) in gnome-shell use `<super-alt-j/k>`
   or with `shift` to move a window.
 - In any terminal use `<ctrl+x><ctrl-e>` to open vim and type a long command.

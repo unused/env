@@ -4,24 +4,23 @@ packages:
   - ruby
   - ruby-devel
   - rubygems
+  - make
   - gcc
   - gcc-c++
   - bzip2
   - openssl-devel
   - libyaml-devel
   - libffi-devel
+  - libpq-devel
   - gdbm-devel
   - ncurses-devel
   - readline-devel
+  - redhat-rpm-config
   - zlib-devel
 
 ruby_gems:
-  - airstream
   - mailcatcher
-  - git_remote_branch
   - brakeman
   - rubocop
-  - rspec
   - guard
   - rails
-
