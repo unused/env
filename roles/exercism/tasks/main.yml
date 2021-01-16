@@ -1,6 +1,6 @@
 ---
 
-- name: Install and setup exercism
-  include: exercism.yml
-  tags: ['exercism', 'dev']
+# - name: Install and setup exercism
+#   include: exercism.yml
+#   tags: ['exercism', 'dev']
 

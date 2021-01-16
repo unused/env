@@ -1,6 +1,7 @@
 ---
 
 development_packages:
+  - vim
   - git
   - ruby
   - nodejs
