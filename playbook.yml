@@ -2,5 +2,17 @@
 
 - hosts: localhost
   connection: local
-  roles: [ system, flatpak, gnome-shell, ruby, javascript, vim ]
-
+  roles:
+    - dev
+    - exercism
+    - flatpak
+    - gnome-shell
+    - javascript
+    - kubernetes
+    - latex
+    - minecraft
+    - music
+    - podman
+    - ruby
+    - system
+    - vim

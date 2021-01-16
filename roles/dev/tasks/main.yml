@@ -1,0 +1,5 @@
+---
+
+- name: Install all kind of stuff on the system
+  import_tasks: packages.yml
+  tags: ['dev', 'packages']

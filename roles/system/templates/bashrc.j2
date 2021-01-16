@@ -16,6 +16,10 @@ fi
 
 # default prompt
 PS1="[${RED_UL}\u@\h:\W \t.\d${GREEN}${GIT_BRANCH}${NC}] \n > "
+# adapted prompt for toolbox
+if [ "$(hostname)" = toolbox ]; then
+  PS1="[${BROWN_UL}\u@\h:\W \t.\d${GREEN}${GIT_BRANCH}${NC}] \n > "
+fi
 
 # enable bash completion
 if [ -f /etc/bash_completion ]; then
@@ -24,7 +28,6 @@ fi
 source /usr/share/git-core/contrib/completion/git-prompt.sh
 
 # ruby
-# export RUBYOPT=rubygems
 alias be='bundle exec'
 
 # grep
@@ -52,9 +55,6 @@ alias tm='tmuxinator'
 alias fim='vim $(fzf)'
 alias gfim='gvim $(fzf)'
 
-# vagrant
-export VAGRANT_DEFAULT_PROVIDER=lxc
-
 # use vim as default editor
 export EDITOR=vim
 
@@ -62,6 +62,6 @@ export EDITOR=vim
 # source <(kubectl completion bash)
 
 # init rbenv
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 . /etc/bashrc

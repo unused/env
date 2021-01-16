@@ -1,6 +1,15 @@
 ---
 
+- name: Set Exercism version
+  set_fact:
+    exercism_version: 'v3.0.13'
+
 - name: Download exercism CLI
   get_url:
     url: "https://github.com/exercism/cli/releases/download/{{ exercism_version }}/exercism-linux-64bit.tgz"
-    dest: "{{ ansible_env.HOME }}/Software/exercism"
+    dest: "/tmp/exercism.tar.gz"
+
+- name: Extract exercism CLI
+  get_url:
+    src: "/tmp/exercism.tar.gz"
+    dest: "/tmp/exercism"

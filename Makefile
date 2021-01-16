@@ -2,13 +2,16 @@
 CMD=ansible-playbook
 OPTS=-K -i inventory
 
-all:
-	$(CMD) $(OPTS) playbook.yml ${ARGS}
+system:
+	$(CMD) $(OPTS) playbook.yml --tags=system,gnome-shell
 
-prepare:
-	su -c 'dnf install libselinux-python python-dnf ansible'
+setup:
+	sudo dnf install -y ansible
 
-test:
-	echo "todo o.O"
+toolbox:
+	./toolbox-builder.sh ruby ruby; \
+	./toolbox-builder.sh js javascript; \
+	./toolbox-builder.sh latex latex; \
+	./toolbox-builder.sh dev dev
 
-.PHONY: all prepare test
+.PHONY: system setup toolbox

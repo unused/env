@@ -1,5 +1,5 @@
 
-# Kubernetes
+# Kubernetes Local Environment
 
 Install minikube and kubectl to setup a local kubernetes environment.
 

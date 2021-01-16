@@ -2,5 +2,5 @@
 
 - name: Configure window manager gnome shell
   import_tasks: gnome.yml
-  tags: ['wm', 'gnome']
+  tags: ['system', 'window-manager', 'gnome']
 

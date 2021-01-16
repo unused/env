@@ -4,5 +4,9 @@
   dnf: name=npm state=latest
   become: yes
 
+- name: Install yarn
+  dnf: name=yarnpkg state=latest
+  become: yes
+
 - name: Set npmrc
   template: src=npmrc.j2 dest={{ ansible_env.HOME }}/.npmrc

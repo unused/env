@@ -2,5 +2,8 @@
 
 - name: Install npm
   import_tasks: npm.yml
-  tags: ['npm']
+  tags: ['dev', 'javascript', 'npm']
 
+- name: Install global javascript packages
+  import_tasks: packages.yml
+  tags: ['dev', 'javascript', 'npm', 'packages']

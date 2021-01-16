@@ -4,9 +4,6 @@
   file: path={{ ansible_env.HOME }}/{{ item }} state=directory
   with_items:
     - Projects
-    - Projects/gocode
-    - Projects/stackoverflow
-    - Pictures/Wallpaper
     - Software
 
 - name: Set bashrc

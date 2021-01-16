@@ -1,0 +1,5 @@
+---
+
+- name: Install latex and pandoc packages
+  import_tasks: packages.yml
+  tags: ['latex', 'pandox']

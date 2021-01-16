@@ -1,40 +1,33 @@
 # my environment setup
 
-A minimal Linux environment setup, using Ansible to manage configs and packages.
+A minimal Linux environment setup using [Ansible] to handle configs and
+software packages and [Toolbox] to manage environments.
 
-- Installs [Development Environment](/roles/system/vars/packages-dev-RedHat.yml)
-- Installs [Common Software](/roles/system/vars/packages-RedHat.yml)
-- Sets some [Gnome File Templates](/roles/system/files/gnome/Templates/)
-- Configures git, vim, bash, rbenv, npm, golang, gnome-shell, minecraft.
+The `roles` contain groups of setup tasks and serve to document and manage
+changes to our machine. Some of the roles are:
+
+- system ... Base Linux system settings.
+- flatpak ... Flatpak application deployment framework and packages.
+- gnome-shell ... Gnome window manager configuration.
+- vim ... Configuration via [unused/.vim](https://github.com/unused/.vim).
+- ruby ... Ruby development stuff.
+- kubernetes ... Local kubernetes development and testing environment.
+- podman ... Container image development environment.
+- minecraft ... Linux client setup for Minecraft
+
+To get some insights one might inspect the [packages vars of system
+role](/roles/system/vars/packages-dev-RedHat.yml) or [gnome file
+templates](/roles/system/files/gnome/Templates/).
 
 ## Usage
 
-Install Ansible, then run `make`.
-
-Actually, there may be some Ansible dependencies missing but you should get
-pretty clear warnings while executing. For Fedora 23 you have to prepare the
-system with some python libs.
+Install Ansible, then run `make system`.
 
 ```sh
-$ make prepare # uses dnf to install some required packages
-$ make
-$ make ARGS=--tags=javascript # run tagged tasks only
+$ make prepare # uses dnf to install ansible
+$ make system # setup machine, install packages, place configurations, etc.
+$ make toolbox # setup toolbox with some containers
 ```
-
-Available roles are:
-
-- system (default) ... Base Linux system settings.
-- flatpak (default) ... Flatpak application deployment framework and packages.
-- gnome-shell (default) ... Gnome window manager configuration.
-- vim (default) ... Configuration via
-  [unused/.vim](https://github.com/unused/.vim).
-- ruby (default) ... Programming language development environment.
-- javascript (default) ... Programming language development environment.
-- bumblebee ... Nvidia optimus Linux driver setup.
-- kubernetes ... Local kubernetes development and testing environment.
-- cron ... WIP
-- docker ... WIP
-- exercism ... WIP
 
 ## FAQ
 
@@ -46,11 +39,11 @@ after a while I did no longer recognize the difference of installing smth via
 package manager or config file that triggers package manager, editing configs
 or editing config templates. Therefor you suffer from no disadvantage when
 Ansible manage your setup but many profits like versioning, reproducing,
-structure and transparency.
+structure, documentation and transparency.
 
 *Does this run on any Linux box?*
 
-Although the configuration is partly prepared for, currently the system only is
+Although the configuration is partly prepared for, currently the system is only
 used and tested with a RedHat based Fedora Linux to automatically setup a
 development workstation. If you really want to run this thing on your favourite
 distribution, let me know, maybe we can take the challenge together.
@@ -68,15 +61,9 @@ overridden.
 
 ## Setup Infos, Details and Hints
 
-- The clipboard manager parcellite provides a list of your last clipboard
-  contents. You can access it with global shortcut `<ctrl-alt-h>`.
 - To switch between workspaces (up/down) in gnome-shell use `<super-alt-j/k>`
   or with `shift` to move a window.
 - In any terminal use `<ctrl+x><ctrl-e>` to open vim and type a long command.
-- [imagemin] and [svgo] are nice cli tools to optimize images. Note:
-  [images.guide] is a good read by Addy Osmani.
 
-[imagemin]: https://github.com/imagemin/imagemin-cli
-[svgo]: https://github.com/svg/svgo
-[images.guide]: https://images.guide/
-
+[Ansible]: https://www.ansible...
+[Toolbox]: https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/
