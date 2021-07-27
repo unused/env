@@ -4,16 +4,19 @@ A minimal Linux environment setup using [Ansible] to handle configs and
 software packages and [Toolbox] to manage environments.
 
 The `roles` contain groups of setup tasks and serve to document and manage
-changes to our machine. Some of the roles are:
+changes to our machine. Every role contains a README file that summarizes
+its purpose, usage and provides hints. Most common roles are:
 
-- system ... Base Linux system settings.
-- flatpak ... Flatpak application deployment framework and packages.
-- gnome-shell ... Gnome window manager configuration.
-- vim ... Configuration via [unused/.vim](https://github.com/unused/.vim).
-- ruby ... Ruby development stuff.
-- kubernetes ... Local kubernetes development and testing environment.
-- podman ... Container image development environment.
-- minecraft ... Linux client setup for Minecraft
+| role                             | description                                                      |
+| -------------------------------- | ----------------------------                                     |
+| [system](roles/system/README.md) | Base Linux system settings.                                      |
+| flatpak                          | Flatpak application deployment framework and packages.           |
+| gnome-shell                      | Gnome window manager configuration.                              |
+| vim                              | Configuration via [unused/.vim](https://github.com/unused/.vim). |
+| ruby                             | Ruby development stuff.                                          |
+| kubernetes                       | Local kubernetes development and testing environment.            |
+| podman                           | Container image development environment.                         |
+| minecraft                        | Linux client setup for Minecraft.                                |
 
 To get some insights one might inspect the [packages vars of system
 role](/roles/system/vars/packages-dev-RedHat.yml) or [gnome file
@@ -58,12 +61,6 @@ Nope, keep using it to make any changes to your systems. Ansible is clever and
 will check changes and run the specific commands. Take care for conflicts, if
 you adapt some Ansible managed file, you might end up with your changes getting
 overridden.
-
-## Setup Infos, Details and Hints
-
-- To switch between workspaces (up/down) in gnome-shell use `<super-alt-j/k>`
-  or with `shift` to move a window.
-- In any terminal use `<ctrl+x><ctrl-e>` to open vim and type a long command.
 
 [Ansible]: https://www.ansible...
 [Toolbox]: https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/
