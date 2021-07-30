@@ -16,6 +16,7 @@ tools_packages:
   - fd-find
   - bat
   - ripgrep
+  - entr
 
 system_packages:
   - htop
