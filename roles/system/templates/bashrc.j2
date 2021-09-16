@@ -52,12 +52,15 @@ alias pretty-json='python -m json.tool'
 alias tm='tmuxinator'
 
 # vim + fzf
-alias fim='vim $(fzf)'
-alias gfim='gvim $(fzf)'
-alias r='fc -s'
+alias vim='gvim -v'
+alias fim='gvim -v $(fzf)'
+
+# alias r='fc -s'
 
 # use vim as default editor
 export EDITOR=vim
+
+export TERM=xterm-256color
 
 # init kubectl bash completion
 # source <(kubectl completion bash)
