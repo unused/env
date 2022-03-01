@@ -62,5 +62,8 @@ will check changes and run the specific commands. Take care for conflicts, if
 you adapt some Ansible managed file, you might end up with your changes getting
 overridden.
 
+`C-x-Ce` - edit a command in $EDITOR and execute it afterwards
+`$ fc` - edit last command, then execute
+
 [Ansible]: https://www.ansible...
 [Toolbox]: https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/
