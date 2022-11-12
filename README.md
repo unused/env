@@ -1,9 +1,9 @@
-# my environment setup
+# my `env`ironment setup
 
 A minimal Linux environment setup using [Ansible] to handle configs and
-software packages and [Toolbox] to manage environments.
+software packages.
 
-The `roles` contain groups of setup tasks and serve to document and manage
+The `roles` contain groups of setup tasks that serve to document and manage
 changes to our machine. Every role contains a README file that summarizes
 its purpose, usage and provides hints. Most common roles are:
 
@@ -24,10 +24,10 @@ templates](/roles/system/files/gnome/Templates/).
 
 ## Usage
 
-Install Ansible, then run `make system`.
+On a blank box install Ansible, build-tools, then run `make system`.
 
 ```sh
-$ make prepare # uses dnf to install ansible
+$ make prepare # uses dnf to install ansible and build-tools
 $ make system # setup machine, install packages, place configurations, etc.
 $ make toolbox # setup toolbox with some containers
 ```
@@ -65,5 +65,5 @@ overridden.
 `C-x-Ce` - edit a command in $EDITOR and execute it afterwards
 `$ fc` - edit last command, then execute
 
-[Ansible]: https://www.ansible...
+[Ansible]: https://docs.ansible.com/
 [Toolbox]: https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/
