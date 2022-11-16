@@ -1,17 +1,17 @@
 
 CMD=ansible-playbook
 OPTS=-K -i inventory
+TAGS=
 
-system:
-	$(CMD) $(OPTS) playbook.yml --tags=system,gnome-shell
-
+.PHONY: setup
 setup:
+	$(CMD) $(OPTS) playbook.yml
+
+.PHONY: pre-setup
+pre-setup:
 	sudo dnf install -y ansible
 
-toolbox:
-	./toolbox-builder.sh ruby ruby; \
-	./toolbox-builder.sh js javascript; \
-	./toolbox-builder.sh latex latex; \
-	./toolbox-builder.sh dev dev
-
-.PHONY: system setup toolbox
+.PHONY: test-setup
+test-setup:
+	podman build -t env-test . && \
+		podman run -it --rm -v`pwd`:/home/me/env/:Z env-test
