@@ -1,5 +1,9 @@
 
+# Ignore ansible fail lock
 playbook.retry
-NOTES.md
 
+# Ignore vendor dependencies
+vendor/
 
+# Ignore logs, test output
+log/
