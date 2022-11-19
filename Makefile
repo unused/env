@@ -2,11 +2,11 @@ IMG=env-test
 
 CMD=ansible-playbook
 OPTS=-K -i inventory
-TAGS=
+TAGS=system
 
 .PHONY: setup
 setup:
-	$(CMD) $(OPTS) playbook.yml
+	$(CMD) $(OPTS) playbook.yml --tags=$(TAGS)
 
 .PHONY: pre-setup
 pre-setup:
@@ -14,7 +14,7 @@ pre-setup:
 
 .PHONY: test
 test:
-	IMG=$(IMG) bundle exec ruby specs/*_test.rb
+	IMG=$(IMG) bundle exec ruby test/*_test.rb
 
 .PHONY: test-setup
 test-setup:

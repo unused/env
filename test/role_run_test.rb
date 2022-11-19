@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require_relative './env'
 
-class TestContainer < Minitest::Test
+class TestRoleRun < Minitest::Test
   def setup
     @run = RoleRun.new 'minecraft'
   end

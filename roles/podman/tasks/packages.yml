@@ -3,8 +3,3 @@
 - name: Load podman packages to install
   include_vars: "packages.yml"
 
-- name: Install podman packages
-  become: yes
-  dnf:
-    name: "{{ packages }}"
-    state: present

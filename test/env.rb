@@ -1,6 +1,5 @@
-
-require_relative './role_run'
 require_relative './container'
+require_relative './role_run'
 
 # Test container image should have a unique name that must be set when running
 # the testsuite.
@@ -13,7 +12,7 @@ CONTAINER = "#{IMAGE}-#{rand(1000...9999)}"
 BASE_DIR = File.expand_path("#{__dir__}/../")
 
 # We require our tests to finish before 10 minutes.
-SLEEP_CMD = 'sleep 600'
+SLEEP_CMD = 'sleep 300'
 
 # Print debug output.
-DEBUG = true
+DEBUG = false

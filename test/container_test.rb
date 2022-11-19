@@ -1,5 +1,4 @@
 require 'minitest/autorun'
-
 require_relative './env'
 
 class TestContainer < Minitest::Test
@@ -38,6 +37,6 @@ class TestContainer < Minitest::Test
 
   def test_it_runs_a_process
     @container.('ls -l')
-    assert @runner.commands.last.start_with? 'podman exec -t image-name-'
+    assert @runner.commands.last.start_with? 'podman exec -i image-name-'
   end
 end

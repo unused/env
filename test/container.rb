@@ -1,3 +1,4 @@
+require 'open3'
 
 # A podman container that can be started, used to exec a process within, and
 # stopped. As we start containers with `--rm` flag, there is no need to remove
@@ -7,19 +8,19 @@
 # is active at time of requesting a command execution.
 class Container
   CMD = 'podman'
-  TIMEOUT = 600
 
   attr_reader :name, :image, :state
 
-  def initialize(image, runner = Kernel.method(:system))
+  def initialize(image, runner = Open3.method(:capture2e))
     @name = "#{image}-#{rand(1000...9999)}"
     @image = image
     @runner = runner
   end
 
   def call(cmd)
-    puts "[#{Time.now}] EXEC: #{CMD} exec -it #{name} #{cmd}" if DEBUG
-    @runner.("#{CMD} exec -it #{name} #{cmd}")
+    full_cmd = "#{CMD} exec -i #{name} sudo #{cmd} OPTS=\"-i inventory\""
+    puts "[#{Time.now}] EXEC: #{full_cmd}" if DEBUG
+    @runner.(full_cmd).first
   end
 
   def start
