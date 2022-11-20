@@ -6,7 +6,7 @@ class RoleRun
   end
 
   def call(container)
-    @result = container.("make setup TAGS=#{@role}")
+    @result = container.("make update TAGS=#{@role}")
     self
   end
 

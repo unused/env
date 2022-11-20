@@ -27,9 +27,9 @@ templates](/roles/system/files/gnome/Templates/).
 On a blank box install Ansible, build-tools, then run `make system`.
 
 ```sh
-$ make prepare # uses dnf to install ansible and build-tools
-$ make system # setup machine, install packages, place configurations, etc.
-$ make toolbox # setup toolbox with some containers
+$ make pre-setup # uses dnf to install ansible and build-tools
+$ make setup # setup machine, install packages, place configurations, etc.
+$ make update TAGS=ruby,vim # update roles ruby and vim
 ```
 
 ## FAQ
@@ -61,9 +61,6 @@ Nope, keep using it to make any changes to your systems. Ansible is clever and
 will check changes and run the specific commands. Take care for conflicts, if
 you adapt some Ansible managed file, you might end up with your changes getting
 overridden.
-
-`C-x-Ce` - edit a command in $EDITOR and execute it afterwards
-`$ fc` - edit last command, then execute
 
 [Ansible]: https://docs.ansible.com/
 [Toolbox]: https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/

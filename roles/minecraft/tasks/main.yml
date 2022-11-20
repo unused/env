@@ -2,13 +2,24 @@
 
 - name: Ensure Minecraft directory exists
   file: path={{ ansible_env.HOME }}/.minecraft/ state=directory
+  tags: ['minecraft']
 
 - name: Download Minecraft launcher
-  get_url:
-    url: "http://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar"
-    dest: "{{ ansible_env.HOME }}/.minecraft/Minecraft.jar"
+  unarchive:
+    src: "https://launcher.mojang.com/download/Minecraft.tar.gz"
+    dest: "{{ ansible_env.HOME }}/.minecraft/"
+    remote_src: yes
+  tags: ['minecraft']
 
-- name:
-  template:
-    src: minecraft-launcher.sh.j2
-    dest: "{{ ansible_env.HOME }}/.minecraft/minecraft-launcher.sh"
+- name: Link Minecraft launcher
+  file:
+    src: "{{ ansible_env.HOME }}/.minecraft/minecraft-launcher/minecraft-launcher"
+    dest: "{{ ansible_env.HOME }}/bin/minecraft"
+    state: link
+  tags: ['minecraft']
+
+# - name:
+#   template:
+#     src: minecraft-launcher.sh.j2
+#     dest: "{{ ansible_env.HOME }}/.minecraft/minecraft-launcher.sh"
+#   tags: ['minecraft']
