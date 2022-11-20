@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# {{ ansible_managed }}
+
 if ! type "primusrun" > /dev/null; then
   echo "using primusrun, starting minecraft"
   primusrun java -jar Minecraft.jar

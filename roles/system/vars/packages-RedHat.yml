@@ -1,9 +1,11 @@
 ---
 
 tools_packages:
+  - vim
   - git
-  - kdiff3
   - tmux
+  - entr
+  - kdiff3
   - openssh
   - openssl-devel
   - the_silver_searcher
@@ -13,10 +15,6 @@ tools_packages:
   - plantuml
   - jq
   - fzf
-  - fd-find
-  - bat
-  - ripgrep
-  - entr
 
 system_packages:
   - htop
@@ -25,10 +23,5 @@ system_packages:
 # Note: mplayer and ffmpeg require rpm fusion repos
 application_packages:
   - google-chrome-stable
-  - cawbird
-  - axel
   - ffmpeg
   - mplayer
-  - gpaste
-  - gpaste-ui
-  - gnome-shell-extension-gpaste

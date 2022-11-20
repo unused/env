@@ -2,11 +2,11 @@
 
 - name: Set Exercism version
   set_fact:
-    exercism_version: 'v3.0.13'
+    exercism_version: 'v3.1.0'
 
 - name: Download exercism CLI
   get_url:
-    url: "https://github.com/exercism/cli/releases/download/{{ exercism_version }}/exercism-linux-64bit.tgz"
+    url: "https://github.com/exercism/cli/releases/download/{{ exercism_version }}/exercism-linux-x86_64.tar.gz"
     dest: "/tmp/exercism.tar.gz"
 
 - name: Extract exercism CLI

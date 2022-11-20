@@ -1,25 +1,23 @@
 
-# Kubernetes Local Environment
+# Kubernetes Dev/Ops Environment
 
-Install minikube and kubectl to setup a local kubernetes environment.
+Install kubectl to setup a local kubernetes environment.
+
+## Archive
+
+You can install minikube using the currently deactivated recipe to have a local
+k8s playground.
 
 ```
+# see https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-kvm2
 $ minikube start --vm-driver kvm # --alsologtostderr
-```
-
-Note: adding user to libvirt group fails atm, running manually like:
-
-```
+# Note: adding user to libvirt group fails atm, running manually like:
 $ sudo usermod -a -G libvirt $(whoami)
 $ newgrp libvirt
 ```
 
-https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-kvm2
-
-## Steps
-
-- [x] install minikube
 - [x] install kubectl
+- [x] install minikube
 - [ ] ensure easy update (use latest versions)
 - [ ] ensure VM driver is present
   - [ ] download docker-machine and ...-kvm

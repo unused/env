@@ -3,3 +3,4 @@
 packages:
   - texlive
   - pandoc
+  - entr

@@ -4,11 +4,11 @@
 #   import_tasks: minikube.yml
 #   tags: ['minikube']
 
-# - name: Setup kubectl
+# - name: Setup latest kubectl
 #   import_tasks: kubectl.yml
 #   tags: ['dev', 'kubernetes', 'k8s']
 
-- name: Install kubectl
+- name: Install k8s client
   become: yes
   dnf:
     name: kubernetes-client

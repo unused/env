@@ -1,6 +1,6 @@
 ---
 
-- name: Install kubectl
+- name: Install latest kubectl
   get_url:
     url: https://storage.googleapis.com/kubernetes-release/release/latest/bin/linux/amd64/kubectl
     dest: "{{ ansible_env.HOME }}/bin/kubectl"

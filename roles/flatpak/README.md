@@ -1,4 +1,4 @@
-# Flatpak (WIP)
+# Flatpak
 
-- [ ] install peek, spotify, ...
-- [ ] use flathub `$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`
+Enable to install and use [flatpak](https://flatpak.org/faq/) apps.
+

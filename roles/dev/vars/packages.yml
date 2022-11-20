@@ -3,6 +3,12 @@
 development_packages:
   - vim
   - git
+  - tmux
+  - entr
   - ruby
   - nodejs
   - golang
+  - elixir
+  - rust
+  - julia
+  - python3

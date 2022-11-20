@@ -3,12 +3,6 @@
 
 Places bash configurations, installs main packages.
 
-## Gnome Shortcuts
-
-- To switch between workspaces (up/down) in gnome-shell use `<super-alt-j/k>`
-  or with `shift` to move a window.
-- In any terminal use `<ctrl+x><ctrl-e>` to open vim and type a long command.
-
 ## Tmux
 
 - Use `Ctrl+b v` to create a new pane vertically, `Ctrl+b b` to create a new
